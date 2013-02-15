@@ -3,6 +3,7 @@
 
 #include <bslma_usesbslmaallocator.h>         // for testing only
 
+#include <bsls_bsltestutil.h>
 #include <bsls_ident.h>
 BSLS_IDENT("$Id$ $CSID$")
 

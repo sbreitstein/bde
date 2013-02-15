@@ -72,6 +72,7 @@
 // evils, as there are only one case of this failure in robo.
 #include <bslstl_pair.h>
 
+#include <bsls_bsltestutil.h>
 #include <bsls_ident.h>
 BSLS_IDENT("$Id$ $CSID$")
 
