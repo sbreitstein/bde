@@ -2,20 +2,19 @@
 
 #include <bslstl_pair.h>
 
-#include <bslmf_istriviallycopyable.h>
-#include <bslmf_isbitwisemoveable.h>
-#include <bslmf_isbitwiseequalitycomparable.h>
-#include <bslmf_istriviallydefaultconstructible.h>
-#include <bslma_usesbslmaallocator.h>
 #include <bslma_allocator.h>
 #include <bslma_default.h>
 #include <bslma_defaultallocatorguard.h>
 #include <bslma_testallocator.h>
-
+#include <bslma_usesbslmaallocator.h>
+#include <bslmf_isbitwiseequalitycomparable.h>
+#include <bslmf_isbitwisemoveable.h>
 #include <bslmf_issame.h>
+#include <bslmf_istriviallycopyable.h>
+#include <bslmf_istriviallydefaultconstructible.h>
+#include <bsls_bsltestutil.h>
 
 #include <algorithm>
-
 #include <cstdio>
 #include <cstdlib>
 #include <cstring>
@@ -94,17 +93,33 @@ void aSsErT(int c, const char *s, int i) {
 
 }  // close unnamed namespace
 
-# define ASSERT(X) { aSsErT(!(X), #X, __LINE__); }
-//--------------------------------------------------------------------------
+// ============================================================================
+//                    STANDARD BDE ASSERT TEST MACROS
+// ----------------------------------------------------------------------------
 
-//=============================================================================
+#define ASSERT       BSLS_BSLTESTUTIL_ASSERT
+
+// ============================================================================
+//                  STANDARD BDE LOOP-ASSERT TEST MACROS
+// ----------------------------------------------------------------------------
+
+#define LOOP_ASSERT  BSLS_BSLTESTUTIL_LOOP_ASSERT
+#define LOOP2_ASSERT BSLS_BSLTESTUTIL_LOOP2_ASSERT
+#define LOOP3_ASSERT BSLS_BSLTESTUTIL_LOOP3_ASSERT
+#define LOOP4_ASSERT BSLS_BSLTESTUTIL_LOOP4_ASSERT
+#define LOOP5_ASSERT BSLS_BSLTESTUTIL_LOOP5_ASSERT
+#define LOOP6_ASSERT BSLS_BSLTESTUTIL_LOOP6_ASSERT
+#define ASSERTV      BSLS_BSLTESTUTIL_ASSERTV
+
+// ============================================================================
 //                  SEMI-STANDARD TEST OUTPUT MACROS
-//-----------------------------------------------------------------------------
-// #define P(X) cout << #X " = " << (X) << endl; // Print identifier and value.
-#define Q(X) std::printf("<| " #X " |>\n");  // Quote identifier literally.
-//#define P_(X) cout << #X " = " << (X) << ", " << flush; // P(X) without '\n'
-#define L_ __LINE__                           // current Line number
-#define T_ std::printf("\t");             // Print a tab (w/o newline)
+// ----------------------------------------------------------------------------
+
+#define Q  BSLS_BSLTESTUTIL_Q  // Quote identifier literally.
+#define P  BSLS_BSLTESTUTIL_P  // Print identifier and value.
+#define P_ BSLS_BSLTESTUTIL_P_ // P(X) without '\n'.
+#define T_ BSLS_BSLTESTUTIL_T_ // Print a tab (w/o newline).
+#define L_ BSLS_BSLTESTUTIL_L_ // current Line number
 
 //=============================================================================
 //                  GLOBAL TYPEDEFS/CONSTANTS FOR TESTING
