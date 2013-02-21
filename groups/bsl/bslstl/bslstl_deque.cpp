@@ -1,7 +1,6 @@
 // bslstl_deque.cpp                                                   -*-C++-*-
 #include <bslstl_deque.h>
 
-#include <bsls_bsltestutil.h>
 #include <bsls_ident.h>
 BSLS_IDENT("$Id$ $CSID$")
 

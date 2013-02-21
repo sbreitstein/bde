@@ -1,7 +1,6 @@
 // bslalg_scalardestructionprimitives.cpp                             -*-C++-*-
 #include <bslalg_scalardestructionprimitives.h>
 
-#include <bsls_bsltestutil.h>
 #include <bsls_ident.h>
 BSLS_IDENT("$Id$ $CSID$")
 

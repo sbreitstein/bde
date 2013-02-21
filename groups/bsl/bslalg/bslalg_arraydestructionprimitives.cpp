@@ -1,7 +1,6 @@
 // bslalg_arraydestructionprimitives.cpp                              -*-C++-*-
 #include <bslalg_arraydestructionprimitives.h>
 
-#include <bsls_bsltestutil.h>
 #include <bsls_ident.h>
 BSLS_IDENT("$Id$ $CSID$")
 

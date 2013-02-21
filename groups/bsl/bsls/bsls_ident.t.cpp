@@ -1,11 +1,8 @@
 // bsls_ident.t.cpp                                                   -*-C++-*-
 
-
-
 // *** The format of this component test driver is non-standard. ***
 
 // #include <bsls_ident.h>      // included below in usage example.
-#include <bsls_bsltestutil.h>
 
 #include <cstdlib>              // 'atoi'
 #include <iostream>
@@ -33,34 +30,6 @@ static void aSsErT(int c, const char *s, int i) {
         if (testStatus >= 0 && testStatus <= 100) ++testStatus;
     }
 }
-
-// ============================================================================
-//                    STANDARD BDE ASSERT TEST MACROS
-// ----------------------------------------------------------------------------
-
-#define ASSERT BSLS_BSLTESTUTIL_ASSERT
-
-// ============================================================================
-//                  STANDARD BDE LOOP-ASSERT TEST MACROS
-// ----------------------------------------------------------------------------
-
-#define LOOP_ASSERT  BSLS_BSLTESTUTIL_LOOP_ASSERT
-#define LOOP2_ASSERT BSLS_BSLTESTUTIL_LOOP2_ASSERT
-#define LOOP3_ASSERT BSLS_BSLTESTUTIL_LOOP3_ASSERT
-#define LOOP4_ASSERT BSLS_BSLTESTUTIL_LOOP4_ASSERT
-#define LOOP5_ASSERT BSLS_BSLTESTUTIL_LOOP5_ASSERT
-#define LOOP6_ASSERT BSLS_BSLTESTUTIL_LOOP6_ASSERT
-#define ASSERTV      BSLS_BSLTESTUTIL_ASSERTV
-
-// ============================================================================
-//                  SEMI-STANDARD TEST OUTPUT MACROS
-// ----------------------------------------------------------------------------
-
-#define Q  BSLS_BSLTESTUTIL_Q  // Quote identifier literally.
-#define P  BSLS_BSLTESTUTIL_P  // Print identifier and value.
-#define P_ BSLS_BSLTESTUTIL_P_ // P(X) without '\n'.
-#define T_ BSLS_BSLTESTUTIL_T_ // Print a tab (w/o newline).
-#define L_ BSLS_BSLTESTUTIL_L_ // current Line number
 
 //=============================================================================
 //                  GLOBAL TYPEDEFS/CONSTANTS FOR TESTING
