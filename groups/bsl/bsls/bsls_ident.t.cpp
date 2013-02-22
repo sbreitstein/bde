@@ -4,8 +4,8 @@
 
 // #include <bsls_ident.h>      // included below in usage example.
 
-#include <cstdlib>              // 'atoi'
-#include <cstdio>
+#include <stdlib.h>              // 'atoi'
+#include <stdio.h>
 
 // using namespace BloombergLP;
 
