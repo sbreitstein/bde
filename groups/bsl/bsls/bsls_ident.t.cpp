@@ -94,7 +94,7 @@ enum { VERBOSE_ARG_NUM = 2, VERY_VERBOSE_ARG_NUM, VERY_VERY_VERBOSE_ARG_NUM };
 
 int main(int argc, char *argv[])
 {
-    int test = argc > 1 ? std::atoi(argv[1]) : 0;
+    int test = argc > 1 ? atoi(argv[1]) : 0;
     int verbose = argc > 2;
 //    int veryVerbose = argc > 3;
 //    int veryVeryVerbose = argc > 4;
