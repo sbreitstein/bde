@@ -6184,8 +6184,10 @@ void TestDriver<TYPE,ALLOC>::testCase8()
         gg(&mX, SPEC);  const Obj& X = mX;
 
         if (veryVerbose) {
-            printf("\t g = "); bsls::BslTestUtil::callDebugprint(g(SPEC)); printf("\n");
-            printf("\tgg = "); bsls::BslTestUtil::callDebugprint(X); printf("\n");
+            printf("\t g = ");
+                      bsls::BslTestUtil::callDebugprint(g(SPEC)); printf("\n");
+            printf("\tgg = ");
+                            bsls::BslTestUtil::callDebugprint(X); printf("\n");
         }
         const bsls::Types::Int64 TOTAL_BLOCKS_BEFORE =
                                                 testAllocator.numBlocksTotal();
