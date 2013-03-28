@@ -6414,7 +6414,7 @@ int main(int argc, char *argv[])
 // profiles in this data set.
 //..
 if (verbose) {
-    printf(ZU " %d\n", numCustomerProfiles, profileCategories.size());
+    printf(ZU " " ZU "\n", numCustomerProfiles, profileCategories.size());
 }
 //..
 // Standard output shows:
