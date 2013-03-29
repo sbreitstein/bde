@@ -514,10 +514,7 @@ static bslma::TestAllocator *globalAllocator_p,
                             *defaultAllocator_p,
                             *objectAllocator_p;
 
-static int numDefaultCtorCalls = 0;
-static int numCharCtorCalls    = 0;
 static int numCopyCtorCalls    = 0;
-static int numAssignmentCalls  = 0;
 static int numDestructorCalls  = 0;
 
                             // ====================
@@ -7048,7 +7045,6 @@ void TestDriver<TYPE,TRAITS,ALLOC>::testCase17()
     // --------------------------------------------------------------------
 
     bslma::TestAllocator  testAllocator(veryVeryVerbose);
-    bslma::Allocator     *Z = &testAllocator;
 
     const TYPE         *values     = 0;
     const TYPE *const&  VALUES     = values;
@@ -7153,7 +7149,6 @@ void TestDriver<TYPE,TRAITS,ALLOC>::testCase17()
                     LOOP2_ASSERT(INIT_LINE, LINE, LENGTH == X.size());
                     LOOP2_ASSERT(INIT_LINE, LINE, CAP == X.capacity());
 
-                    size_t m = 0;
                     for (k = 0; k < INIT_LENGTH; ++k) {
                         LOOP4_ASSERT(INIT_LINE, LINE, i, k,
                                      VALUES[k % NUM_VALUES] == X[k]);
@@ -7276,7 +7271,6 @@ void TestDriver<TYPE,TRAITS,ALLOC>::testCase17Range(const CONTAINER&)
     // --------------------------------------------------------------------
 
     bslma::TestAllocator  testAllocator(veryVeryVerbose);
-    bslma::Allocator     *Z = &testAllocator;
 
     const TYPE         *values     = 0;
     const TYPE *const&  VALUES     = values;
@@ -8284,9 +8278,7 @@ void TestDriver<TYPE,TRAITS,ALLOC>::testCase15Negative()
 
     {
         for (int ti = 0; ti < NUM_DATA; ++ti) {
-            const int     LINE   = DATA[ti].d_lineNum;
             const char   *SPEC   = DATA[ti].d_spec;
-            const size_t  LENGTH = strlen(SPEC);
 
             Obj mX(g(SPEC));
             const Obj& X = mX;
@@ -9098,8 +9090,6 @@ void TestDriver<TYPE,TRAITS,ALLOC>::testCase12()
     // --------------------------------------------------------------------
 
     bslma::TestAllocator  testAllocator(veryVeryVerbose);
-
-    const TYPE            DEFAULT_VALUE = TYPE();
 
     const TYPE           *values     = 0;
     const TYPE *const&    VALUES     = values;
@@ -9933,6 +9923,7 @@ void TestDriver<TYPE,TRAITS,ALLOC>::testCase11()
     const TYPE *const&  VALUES     = values;
     const int           NUM_VALUES = getValues(&values);
     (void)NUM_VALUES;
+    (void)VALUES;
 
     if (verbose)
         printf("\nTesting 'bslma::UsesBslmaAllocator'.\n");
