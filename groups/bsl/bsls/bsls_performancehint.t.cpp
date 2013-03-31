@@ -280,15 +280,23 @@ void addWithoutPrefetch(volatile int *arrayA, volatile int *arrayB)
     // without using prefetch.
 {
     for (int i = 0; i < SIZE/8; ++i){
-        *(arrayA++) = *arrayA + *(arrayB++);
-        *(arrayA++) = *arrayA + *(arrayB++);
-        *(arrayA++) = *arrayA + *(arrayB++);
-        *(arrayA++) = *arrayA + *(arrayB++);
+        *arrayA += *(arrayB++);
+        ++arrayA;
+        *arrayA += *(arrayB++);
+        ++arrayA;
+        *arrayA += *(arrayB++);
+        ++arrayA;
+        *arrayA += *(arrayB++);
+        ++arrayA;
 
-        *(arrayA++) = *arrayA + *(arrayB++);
-        *(arrayA++) = *arrayA + *(arrayB++);
-        *(arrayA++) = *arrayA + *(arrayB++);
-        *(arrayA++) = *arrayA + *(arrayB++);
+        *arrayA += *(arrayB++);
+        ++arrayA;
+        *arrayA += *(arrayB++);
+        ++arrayA;
+        *arrayA += *(arrayB++);
+        ++arrayA;
+        *arrayA += *(arrayB++);
+        ++arrayA;
     }
 }
 
@@ -302,15 +310,23 @@ void addWithPrefetch(volatile int *arrayA, volatile int *arrayB)
         BloombergLP::bsls::PerformanceHint::prefetchForReading(
                                                           (int *) arrayB + 16);
 
-        *(arrayA++) = *arrayA + *(arrayB++);
-        *(arrayA++) = *arrayA + *(arrayB++);
-        *(arrayA++) = *arrayA + *(arrayB++);
-        *(arrayA++) = *arrayA + *(arrayB++);
+        *arrayA += *(arrayB++);
+        ++arrayA;
+        *arrayA += *(arrayB++);
+        ++arrayA;
+        *arrayA += *(arrayB++);
+        ++arrayA;
+        *arrayA += *(arrayB++);
+        ++arrayA;
 
-        *(arrayA++) = *arrayA + *(arrayB++);
-        *(arrayA++) = *arrayA + *(arrayB++);
-        *(arrayA++) = *arrayA + *(arrayB++);
-        *(arrayA++) = *arrayA + *(arrayB++);
+        *arrayA += *(arrayB++);
+        ++arrayA;
+        *arrayA += *(arrayB++);
+        ++arrayA;
+        *arrayA += *(arrayB++);
+        ++arrayA;
+        *arrayA += *(arrayB++);
+        ++arrayA;
     }
 }
 
