@@ -6527,7 +6527,7 @@ void TestDriver<TYPE,TRAITS,ALLOC>::testCase18Range(const CONTAINER&)
                 for (int ti = 0; ti < NUM_U_DATA; ++ti) {
                     const int     LINE         = U_DATA[ti].d_lineNum;
                     const char   *SPEC         = U_DATA[ti].d_spec;
-                    const int     NUM_ELEMENTS = strlen(SPEC);
+                    const size_t  NUM_ELEMENTS = strlen(SPEC);
 
                     Obj mY(g(SPEC));  const Obj& Y = mY;
 
@@ -6536,7 +6536,7 @@ void TestDriver<TYPE,TRAITS,ALLOC>::testCase18Range(const CONTAINER&)
                         const size_t POS  = j;
                         const size_t POS2 = k;
 
-                        const int    NUM_ELEMENTS_INS = NUM_ELEMENTS - POS2;
+                        const size_t NUM_ELEMENTS_INS = NUM_ELEMENTS - POS2;
                         const size_t LENGTH = INIT_LENGTH + NUM_ELEMENTS_INS;
 
                         Obj mX(INIT_LENGTH,
@@ -6647,7 +6647,7 @@ void TestDriver<TYPE,TRAITS,ALLOC>::testCase18Range(const CONTAINER&)
                 for (int ti = 0; ti < NUM_U_DATA; ++ti) {
                     const int     LINE         = U_DATA[ti].d_lineNum;
                     const char   *SPEC         = U_DATA[ti].d_spec;
-                    const int     NUM_ELEMENTS = strlen(SPEC);
+                    const size_t  NUM_ELEMENTS = strlen(SPEC);
                     const size_t  LENGTH       = INIT_LENGTH + NUM_ELEMENTS;
 
                     Obj mY(g(SPEC));  const Obj& Y = mY;
@@ -7506,14 +7506,14 @@ void TestDriver<TYPE,TRAITS,ALLOC>::testCase17Range(const CONTAINER&)
                 for (int ti = 0; ti < NUM_U_DATA; ++ti) {
                     const int     LINE         = U_DATA[ti].d_lineNum;
                     const char   *SPEC         = U_DATA[ti].d_spec;
-                    const int     NUM_ELEMENTS = strlen(SPEC);
+                    const size_t  NUM_ELEMENTS = strlen(SPEC);
 
                     Obj mY(g(SPEC));  const Obj& Y = mY;
 
                     for (size_t k = 0; k <= NUM_ELEMENTS; ++k) {
                         const size_t POS2 = k;
 
-                        const int    NUM_ELEMENTS_INS = NUM_ELEMENTS - POS2;
+                        const size_t NUM_ELEMENTS_INS = NUM_ELEMENTS - POS2;
                         const size_t LENGTH = INIT_LENGTH + NUM_ELEMENTS_INS;
 
                         Obj mX(INIT_LENGTH,
@@ -7615,7 +7615,7 @@ void TestDriver<TYPE,TRAITS,ALLOC>::testCase17Range(const CONTAINER&)
                 for (int ti = 0; ti < NUM_U_DATA; ++ti) {
                     const int     LINE         = U_DATA[ti].d_lineNum;
                     const char   *SPEC         = U_DATA[ti].d_spec;
-                    const int     NUM_ELEMENTS =
+                    const size_t  NUM_ELEMENTS =
                       (APPEND_CSTRING_NULL_0 == appendMode) ? 0 : strlen(SPEC);
                     const size_t  LENGTH       = INIT_LENGTH + NUM_ELEMENTS;
 
