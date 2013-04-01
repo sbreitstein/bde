@@ -164,12 +164,13 @@ void bar()
     count2++;
 }
 
-void testCase1(int argc, bool /* assert */)
+void testCase1(int argc, bool assert)
 {
     int verbose = argc > 2;
     int veryVerbose = argc > 3;
     int veryVeryVerbose = argc > 4;
- 
+
+    (void)assert;
     (void)verbose;
     (void)veryVerbose;
     (void)veryVeryVerbose;
@@ -336,6 +337,7 @@ void testCase3(int argc, bool assert)
     int veryVerbose = argc > 3;
     int veryVeryVerbose = argc > 4;
 
+    (void)assert;
     (void)verbose;
     (void)veryVeryVerbose;
 
@@ -401,10 +403,6 @@ void testCase3(int argc, bool assert)
     }
 
 #endif
-
-#else
-
-    (void)assert;
 
 #endif
 
