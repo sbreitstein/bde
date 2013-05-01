@@ -233,6 +233,7 @@ unix-                   _       RETRY_ALLTEST   = $(RETRY) -t 0 -a 3 -s!ILL,TRAP
 # file(s)-to-unspecified copy
 !! unix-           _       RSYNC           = rsync -a
 !! unix-           _       CP              = cp -p
+!! unix-AIX        _       CP              = rsync -lptg
 windows-           _       CP              = perl -MFile::Copy -MFile::Basename -e "$$d=pop(@ARGV); die unless -d($$d) or -d($$d=dirname($$d)); while ($$f=shift @ARGV) { copy $$_,$$d foreach glob($$f) }; print \"\tcopied to $$d\n\"" --
 
 # file(s)-to-dir copy
